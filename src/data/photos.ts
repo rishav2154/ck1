@@ -62,33 +62,6 @@ export const photos: Photo[] = [
     category: 'workshops',
     date: '2024-02-15',
     tags: ['penetration-testing', 'advanced', 'tools', 'techniques']
-  },
-  {
-    id: '7',
-    title: 'Research Presentation Day',
-    description: 'Annual research presentation where members showcase their threat intelligence and security research.',
-    imageUrl: 'https://images.pexels.com/photos/267507/pexels-photo-267507.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'events',
-    date: '2024-02-20',
-    tags: ['research', 'presentation', 'threat-intelligence', 'showcase']
-  },
-  {
-    id: '8',
-    title: 'Capture The Flag Competition',
-    description: 'Internal CTF competition to test and improve members\' practical cybersecurity skills.',
-    imageUrl: 'https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'competitions',
-    date: '2024-02-25',
-    tags: ['ctf', 'competition', 'skills', 'practical']
-  },
-  {
-    id: '9',
-    title: 'Industry Expert Guest Lecture',
-    description: 'Special guest lecture by industry cybersecurity expert on emerging threats and defense strategies.',
-    imageUrl: 'https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'events',
-    date: '2024-03-01',
-    tags: ['guest-lecture', 'industry-expert', 'threats', 'defense']
   }
 ];
 

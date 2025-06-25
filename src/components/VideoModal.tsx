@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { X, Clock, User, BookOpen, Download, CheckCircle, List } from 'lucide-react';
+import { X, Clock, User, BookOpen, Download, CheckCircle, List, ExternalLink, Youtube } from 'lucide-react';
 import { Course, PlaylistItem } from '../data/courses';
 
 interface VideoModalProps {
@@ -230,6 +230,36 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, course }) => {
                   </div>
                 </div>
               </div>
+
+              {/* Credits Section */}
+              {course.credits && (
+                <div className="p-4 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 rounded-lg border border-orange-200 dark:border-orange-800">
+                  <div className="flex items-center space-x-3 mb-3">
+                    <Youtube className="h-5 w-5 text-red-600 dark:text-red-400" />
+                    <h4 className="font-semibold text-orange-900 dark:text-orange-100">
+                      Course Credits
+                    </h4>
+                  </div>
+                  <p className="text-sm text-orange-700 dark:text-orange-300 mb-3">
+                    This course content is provided by <strong>{course.credits.channel}</strong>
+                  </p>
+                  {course.credits.originalTitle && (
+                    <p className="text-xs text-orange-600 dark:text-orange-400 mb-3 italic">
+                      Original: "{course.credits.originalTitle}"
+                    </p>
+                  )}
+                  <a
+                    href={course.credits.channelUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-2 text-sm bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+                  >
+                    <Youtube className="h-4 w-4" />
+                    <span>Visit Channel</span>
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
+                </div>
+              )}
 
               {/* Description */}
               <div className="p-4 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 rounded-lg border border-blue-200 dark:border-gray-600">

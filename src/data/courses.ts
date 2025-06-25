@@ -11,6 +11,11 @@ export interface Course {
   tags: string[];
   notesUrl: string;
   playlist?: PlaylistItem[];
+  credits?: {
+    channel: string;
+    channelUrl: string;
+    originalTitle?: string;
+  };
 }
 
 export interface PlaylistItem {
@@ -32,10 +37,15 @@ export const courses: Course[] = [
     category: 'networking',
     thumbnail: 'https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     videoUrl: 'https://www.youtube.com/embed/bj-Yfakjllc',
-    instructor: 'Sarah Chen',
+    instructor: 'NetworkChuck',
     level: 'Beginner',
     tags: ['networking', 'fundamentals', 'protocols'],
     notesUrl: '/notes/network-fundamentals.pdf',
+    credits: {
+      channel: 'NetworkChuck',
+      channelUrl: 'https://www.youtube.com/@NetworkChuck',
+      originalTitle: 'you need to learn Networking RIGHT NOW!! // FREE CCNA // EP 1'
+    },
     playlist: [
       {
         id: '1-1',
@@ -152,10 +162,15 @@ export const courses: Course[] = [
     category: 'networking',
     thumbnail: 'https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     videoUrl: 'https://www.youtube.com/embed/n0iaPtsnmxQ',
-    instructor: 'Michael Rodriguez',
+    instructor: 'Gate Smashers',
     level: 'Intermediate',
     tags: ['computer networks', 'architecture', 'implementation'],
-    notesUrl: '/notes/computer-networks.pdf'
+    notesUrl: '/notes/computer-networks.pdf',
+    credits: {
+      channel: 'Gate Smashers',
+      channelUrl: 'https://www.youtube.com/@GateSmashers',
+      originalTitle: 'Computer Networks Complete Course'
+    }
   },
   {
     id: '3',
@@ -165,10 +180,15 @@ export const courses: Course[] = [
     category: 'networking',
     thumbnail: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     videoUrl: 'https://www.youtube.com/embed/gGTDFG2Q_UM',
-    instructor: 'David Park',
+    instructor: 'PowerCert Animated Videos',
     level: 'Beginner',
     tags: ['topologies', 'network design', 'infrastructure'],
-    notesUrl: '/notes/network-topologies.pdf'
+    notesUrl: '/notes/network-topologies.pdf',
+    credits: {
+      channel: 'PowerCert Animated Videos',
+      channelUrl: 'https://www.youtube.com/@PowerCertAnimatedVideos',
+      originalTitle: 'Network Topologies (Star, Bus, Ring, Mesh, Ad hoc, Infrastructure, & Wireless Mesh Topology)'
+    }
   },
   {
     id: '4',
@@ -178,10 +198,15 @@ export const courses: Course[] = [
     category: 'networking',
     thumbnail: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     videoUrl: 'https://www.youtube.com/embed/1msEo8PIcbw',
-    instructor: 'Sarah Chen',
+    instructor: 'Practical Networking',
     level: 'Intermediate',
     tags: ['osi model', 'tcp/ip', 'protocols', 'layers'],
     notesUrl: '/notes/osi-tcpip-models.pdf',
+    credits: {
+      channel: 'Practical Networking',
+      channelUrl: 'https://www.youtube.com/@PracticalNetworking',
+      originalTitle: 'OSI Model Explained | OSI Animation | Open System Interconnection Model | OSI 7 layers'
+    },
     playlist: [
       {
         id: '4-1',
@@ -207,10 +232,15 @@ export const courses: Course[] = [
     category: 'networking',
     thumbnail: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     videoUrl: 'https://www.youtube.com/embed/aUYwx9bYlGY',
-    instructor: 'Alex Kumar',
+    instructor: 'NetworkChuck',
     level: 'Intermediate',
     tags: ['protocols', 'http', 'dns', 'dhcp'],
-    notesUrl: '/notes/network-protocols.pdf'
+    notesUrl: '/notes/network-protocols.pdf',
+    credits: {
+      channel: 'NetworkChuck',
+      channelUrl: 'https://www.youtube.com/@NetworkChuck',
+      originalTitle: 'Network Protocols - ARP, FTP, SMTP, HTTP, SSL, TLS, HTTPS, DNS, DHCP - Networking Fundamentals - L6'
+    }
   },
 
   // Cybersecurity Fundamentals
@@ -222,10 +252,15 @@ export const courses: Course[] = [
     category: 'cybersecurity',
     thumbnail: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     videoUrl: 'https://www.youtube.com/embed/inWWhr5tnEA',
-    instructor: 'Jennifer Adams',
+    instructor: 'Simplilearn',
     level: 'Beginner',
     tags: ['cybersecurity', 'introduction', 'career'],
     notesUrl: '/notes/cybersecurity-intro.pdf',
+    credits: {
+      channel: 'Simplilearn',
+      channelUrl: 'https://www.youtube.com/@SimplilearnOfficial',
+      originalTitle: 'Cybersecurity In 7 Minutes | What Is Cybersecurity: How It Works? | Cybersecurity Explained'
+    },
     playlist: [
       {
         id: '6-1',
@@ -258,10 +293,15 @@ export const courses: Course[] = [
     category: 'cybersecurity',
     thumbnail: 'https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     videoUrl: 'https://www.youtube.com/embed/jZlWbLY0fQc',
-    instructor: 'Robert Miller',
+    instructor: 'Professor Messer',
     level: 'Beginner',
     tags: ['cia triad', 'authentication', 'authorization', 'security principles'],
     notesUrl: '/notes/security-principles.pdf',
+    credits: {
+      channel: 'Professor Messer',
+      channelUrl: 'https://www.youtube.com/@professormesser',
+      originalTitle: 'Security+ SY0-601 Training Course'
+    },
     playlist: [
       {
         id: '7-1',
@@ -287,10 +327,15 @@ export const courses: Course[] = [
     category: 'cybersecurity',
     thumbnail: 'https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     videoUrl: 'https://www.youtube.com/embed/Dk-ZqQ-bfy4',
-    instructor: 'Tom Wilson',
+    instructor: 'Cybrary',
     level: 'Intermediate',
     tags: ['threats', 'attacks', 'malware', 'phishing'],
     notesUrl: '/notes/threats-attacks.pdf',
+    credits: {
+      channel: 'Cybrary',
+      channelUrl: 'https://www.youtube.com/@CybraryIT',
+      originalTitle: 'Common Cyber Threats and Attack Vectors'
+    },
     playlist: [
       {
         id: '8-1',
@@ -316,10 +361,15 @@ export const courses: Course[] = [
     category: 'cybersecurity',
     thumbnail: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     videoUrl: 'https://www.youtube.com/embed/hfyLjRZmEFc',
-    instructor: 'Lisa Wang',
+    instructor: 'PowerCert Animated Videos',
     level: 'Intermediate',
     tags: ['firewalls', 'network security', 'configuration'],
-    notesUrl: '/notes/firewalls.pdf'
+    notesUrl: '/notes/firewalls.pdf',
+    credits: {
+      channel: 'PowerCert Animated Videos',
+      channelUrl: 'https://www.youtube.com/@PowerCertAnimatedVideos',
+      originalTitle: 'Firewalls Explained | Cybersecurity'
+    }
   },
 
   // Kali Linux (Advanced)
@@ -331,10 +381,15 @@ export const courses: Course[] = [
     category: 'kali-linux',
     thumbnail: 'https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     videoUrl: 'https://www.youtube.com/embed/ZJFu0AoAY_g',
-    instructor: 'Michael Rodriguez',
+    instructor: 'NetworkChuck',
     level: 'Advanced',
     tags: ['kali linux', 'installation', 'setup'],
     notesUrl: '/notes/kali-installation.pdf',
+    credits: {
+      channel: 'NetworkChuck',
+      channelUrl: 'https://www.youtube.com/@NetworkChuck',
+      originalTitle: 'you need to learn Kali Linux RIGHT NOW!! // EP 1'
+    },
     playlist: [
       {
         id: '10-1',
@@ -360,10 +415,15 @@ export const courses: Course[] = [
     category: 'kali-linux',
     thumbnail: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     videoUrl: 'https://www.youtube.com/embed/M2D3rqd0x0Y',
-    instructor: 'David Park',
+    instructor: 'HackerSploit',
     level: 'Advanced',
     tags: ['kali linux', 'ethical hacking', 'penetration testing', 'tools'],
     notesUrl: '/notes/kali-complete-course.pdf',
+    credits: {
+      channel: 'HackerSploit',
+      channelUrl: 'https://www.youtube.com/@HackerSploit',
+      originalTitle: 'Complete Ethical Hacking Course - Network Penetration Testing for Beginners (2023)'
+    },
     playlist: [
       {
         id: '11-1',
@@ -516,11 +576,16 @@ export const courses: Course[] = [
     duration: '55:20',
     category: 'design',
     thumbnail: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    instructor: 'Emma Thompson',
+    videoUrl: 'https://www.youtube.com/embed/c9Wg6Cb_YlU',
+    instructor: 'AJ&Smart',
     level: 'Beginner',
     tags: ['ui', 'ux', 'design principles'],
-    notesUrl: '/notes/ui-ux-design-principles.pdf'
+    notesUrl: '/notes/ui-ux-design-principles.pdf',
+    credits: {
+      channel: 'AJ&Smart',
+      channelUrl: 'https://www.youtube.com/@AJSmart',
+      originalTitle: 'UI/UX Design Tutorial – Wireframe, Mockup & Design in Figma'
+    }
   },
   {
     id: '13',
@@ -529,11 +594,16 @@ export const courses: Course[] = [
     duration: '42:30',
     category: 'design',
     thumbnail: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    instructor: 'Alex Kumar',
+    videoUrl: 'https://www.youtube.com/embed/6t_dYhXyYjI',
+    instructor: 'Flux',
     level: 'Intermediate',
     tags: ['dashboard', 'visualization', 'security'],
-    notesUrl: '/notes/security-dashboard-design.pdf'
+    notesUrl: '/notes/security-dashboard-design.pdf',
+    credits: {
+      channel: 'Flux',
+      channelUrl: 'https://www.youtube.com/@FluxUI',
+      originalTitle: 'How to Design a Dashboard - UI/UX Design Tutorial'
+    }
   },
 
   // Document Formatting
@@ -544,11 +614,16 @@ export const courses: Course[] = [
     duration: '35:45',
     category: 'formatting',
     thumbnail: 'https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    instructor: 'Robert Miller',
+    videoUrl: 'https://www.youtube.com/embed/mAM1oZZjdLs',
+    instructor: 'Cybrary',
     level: 'Beginner',
     tags: ['writing', 'reports', 'documentation'],
-    notesUrl: '/notes/professional-report-writing.pdf'
+    notesUrl: '/notes/professional-report-writing.pdf',
+    credits: {
+      channel: 'Cybrary',
+      channelUrl: 'https://www.youtube.com/@CybraryIT',
+      originalTitle: 'How to Write Professional Cybersecurity Reports'
+    }
   },
   {
     id: '15',
@@ -557,11 +632,16 @@ export const courses: Course[] = [
     duration: '41:20',
     category: 'formatting',
     thumbnail: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    instructor: 'Jennifer Adams',
+    videoUrl: 'https://www.youtube.com/embed/R6zeikbTgVc',
+    instructor: 'Technical Writer HQ',
     level: 'Intermediate',
     tags: ['documentation', 'standards', 'formatting'],
-    notesUrl: '/notes/technical-documentation-standards.pdf'
+    notesUrl: '/notes/technical-documentation-standards.pdf',
+    credits: {
+      channel: 'Technical Writer HQ',
+      channelUrl: 'https://www.youtube.com/@TechnicalWriterHQ',
+      originalTitle: 'Technical Writing 101: Introduction to Technical Writing'
+    }
   }
 ];
 
